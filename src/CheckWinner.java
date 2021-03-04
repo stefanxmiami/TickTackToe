@@ -21,7 +21,7 @@ public class CheckWinner extends Main{
         winning.add(middleRow);
         winning.add(bottomRow);
 
-        winning.add(leftRightDiagonal);
+        winning.add(leftRow);
         winning.add(centerRow);
         winning.add(rightRow);
 

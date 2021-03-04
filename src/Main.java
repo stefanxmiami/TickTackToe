@@ -31,7 +31,7 @@ public class Main implements GameBoardInterface, GameBoardNumberSelectInterface 
             //PlayerSelects
             playerPositions = sc.nextInt();
 
-            while(listPlayerPositions.contains(playerPositions) || listComputerPositions.contains(playerPositions)){
+            while(listPlayerPositions.contains(playerPositions) | listComputerPositions.contains(playerPositions)){
                System.out.println("Please choose an empty slot!");
                playerPositions = sc.nextInt();
            }
@@ -43,8 +43,9 @@ public class Main implements GameBoardInterface, GameBoardNumberSelectInterface 
             //ComputerSelects
             computerPositions = computer.nextInt(9)+1;
 
-            while(listComputerPositions.contains(computerPositions) || listPlayerPositions.contains(computerPositions)){
-                System.out.println("Please choose an empty slot!");
+            while(listComputerPositions.contains(computerPositions) | listPlayerPositions.contains(computerPositions)){
+                checkWinner.winner();
+                //System.out.println("Please choose an empty slot!");
                 computerPositions = computer.nextInt(9)+1;
             }
             computerSelect.computerSelector();

@@ -31,13 +31,13 @@ public class CheckWinner extends Main{
         for (List l : winning) {
             if (listPlayerPositions.containsAll(l)) {
                 System.out.println("Congratulations, you won!");
-                gameActive=false;
+                System.exit(0);
             } else if (listComputerPositions.containsAll(l)) {
                 System.out.println("Computer won! Keep practicing");
-                gameActive=false;
+                System.exit(0);
             } else if (listPlayerPositions.size() + listComputerPositions.size() == 9){
                 System.out.println("It's a tie!");
-                gameActive=false;
+                System.exit(0);
             }
         }
 
